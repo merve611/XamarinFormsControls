@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsControls.MainPage">
+
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Red" Orientation="Vertical">
+
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Green"
+                     Orientation="Horizontal">
+            <Button Text="Push me!" BackgroundColor="Chocolate" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+            <Entry Placeholder="I'm placeholder!" BackgroundColor="Pink" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+            <Switch BackgroundColor="DarkBlue" VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
+            
+        </StackLayout>
+        
+        <Label Text="Xamarine hoşgeldiniz   !" HorizontalOptions="Center" 
+                   VerticalOptions="CenterAndExpand" BackgroundColor="LightBlue" FontSize="Medium"/>
+
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="LightYellow">
+            
+        </StackLayout>
+     
+    </StackLayout>
+
+</ContentPage>

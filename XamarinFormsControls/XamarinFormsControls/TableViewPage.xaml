@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsControls.TableViewPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection Title="My Settings">
+                        <SwitchCell Text="Bilinmeyen numaralara izin" On="False"/>
+                        <EntryCell Text="Bir Mesaj bırakın."/>
+                        <TextCell Text="Developer Actions" Detail="Join" />   <!--Bir sayfaya gidecek yada öyle bişey-->
+                        <ImageCell ImageSource="yapayzeka.jpg" Text="Artificial İntelligence" Detail="Al Surver"/>
+
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                            
+
+                            <Image Source="yapayzeka.jpg" Aspect="Fill" Grid.Row="0" Grid.Column="0"/>
+                            <Label Text="I am not a robot" Grid.Row="0" Grid.Column="1"/>
+                            <Switch IsToggled="True" Grid.Row="0" Grid.Column="2"/>
+
+                            </Grid>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    
+    

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinFormsControls.MasterDetailPages"
+             x:Class="XamarinFormsControls.MasterDetailPagesSimple">
+
+
+    <MasterDetailPage.Master>
+        <local:Page1 Title="Master" BackgroundColor="Red"></local:Page1>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <local:Page2 Title="Detail" BackgroundColor="Blue"></local:Page2>
+    </MasterDetailPage.Detail>
+    
+    
+</MasterDetailPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsControls.GridTestPage">
+
+    <ContentPage.Padding>                               <!-- Bu kod bloğu telefonun üst kısmında yer alan kısımların düzeltilmesi için yazılmıştır. -->
+        <OnPlatform x:TypeArguments="Thickness"
+                    Android="0,0,0,0"
+                    iOS="0,20,0,0"/>
+    </ContentPage.Padding>
+    
+   
+        
+    <ContentPage.Content>
+        <Grid BackgroundColor="Red" RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>            <!-- Satırın genişliğini set edildi, ilk satır ikinci satırın 2 katı kadar yer kaplar -->
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>          <!-- Kolonun genişliği set edildi, ilk kolon 2.kolonun iki katı kadar yer kaplar -->
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="1.Satır 1.Kolon" Grid.Row="0" Grid.Column="0" BackgroundColor="Yellow" 
+                   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Label Text="1.Satır 2.Kolon" Grid.Row="0" Grid.Column="1" BackgroundColor="Green"
+                   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Label Text="2.Satır 1.Kolon" Grid.Row="1" Grid.Column="0" BackgroundColor="Purple" 
+                   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Label Text="2.Satır 2.Kolon" Grid.Row="1" Grid.Column="1" BackgroundColor="Orange"
+                   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

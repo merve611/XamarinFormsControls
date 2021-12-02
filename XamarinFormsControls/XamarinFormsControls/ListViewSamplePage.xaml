@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsControls.ListViewSamplePage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightBlue">
+            <ListView x:Name="myListView" IsPullToRefreshEnabled="True" Refreshing="myListView_Refreshing">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <!--<ImageCell Text="{Binding userName}" Detail="{Binding userId}" ImageSource="{Binding imageUrl}"  />-->
+                        <!--<TextCell Text="{Binding userName}" Detail="{Binding userId}"  />-->
+                        <!--<EntryCell Text="{Binding userName}" Label="{Binding userId}"/>-->
+
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Ekle" Clicked="MenuItem_Clicked"/>
+                                <MenuItem Text="Sil" x:Name="onDelete" Clicked="onDelete_Clicked"/>
+                            </ViewCell.ContextActions> 
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <Image Source="{Binding imageUrl}" Aspect="Fill" Grid.Row="0" Grid.Column="0"/>
+                                <Entry Placeholder="{Binding userName}" Grid.Row="0" Grid.Column="1" />
+                                <Button Text="{Binding userId}" Grid.Row="0" Grid.Column="2"/>
+
+
+                            </Grid>
+                        </ViewCell>
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

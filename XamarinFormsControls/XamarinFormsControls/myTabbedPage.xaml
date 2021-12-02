@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:XamarinFormsControls.TabbedPages"
+             x:Class="XamarinFormsControls.myTabbedPage">
+
+            <!--<ContentPage Title="Tab 1"/>
+            <ContentPage Title="Tab 2"/>
+            <ContentPage Title="Tab 3"/>-->
+
+        <local:TabbledPageOne Title="Profile"/>
+        <local:TabbedPageTwo Title="Message"/>
+        <local:TabbedPageThree Title="Notifications"/>
+    
+    
+    
+    
+    
+
+
+
+
+
+</TabbedPage>
