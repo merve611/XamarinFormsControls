@@ -11,10 +11,10 @@
         <BoxView Color="White" AbsoluteLayout.LayoutBounds="0.5,0.1,100,100" 
                  AbsoluteLayout.LayoutFlags="PositionProportional" />
         <Image x:Name="imgContainer" Source="yapayzeka.jpg"  AbsoluteLayout.LayoutBounds="0.5,0.1,100,100" 
-                 AbsoluteLayout.LayoutFlags="PositionProportional" IsVisible="False" />
-
+                 AbsoluteLayout.LayoutFlags="PositionProportional" IsVisible="False" />     <!--IsVisible i false yapma sebebi butona tıklanmadan önce resim gözükmesin -->
+        <!--"0,1,1,50" ; x eksenini başında, y ekseninin sonunda, hight si 1 , width si 50-->
         <Button BackgroundColor="DarkGray" Text="Show Image" TextColor="White"
-                AbsoluteLayout.LayoutBounds="0,1,1,50"  
+                AbsoluteLayout.LayoutBounds="0,1,1,50" 
                 AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" Clicked="Button_Clicked" />
     </AbsoluteLayout>
 </ContentPage>

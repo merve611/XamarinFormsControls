@@ -10,7 +10,7 @@ namespace XamarinFormsControls
         {
             InitializeComponent();
 
-            MainPage = new ButonTestPages();
+            MainPage = new ImageCirclePage();
         }
 
         protected override void OnStart()

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinFormsControls.CustomRenderersAll"
              x:Class="XamarinFormsControls.XamarinElementsPage">
 
     <ContentPage.Padding>
@@ -20,7 +21,8 @@
             <Slider x:Name="mySlider"/>
             <DatePicker x:Name="myDatePicker"/>
             <TimePicker x:Name="myTimePicker"/>
-            <Picker x:Name="myPicker" SelectedIndexChanged="myPicker_SelectedIndexChanged"/>
+            <local:CustomPicker x:Name="myPicker" SelectedIndexChanged="myPicker_SelectedIndexChanged" Image="downarrow.png"/>
+            <!--Seçilen ıtemın değiştiğini yakalayan bir ıvent -->
             <Switch x:Name="mySwitch"/>
         </StackLayout>
     </ContentPage.Content>

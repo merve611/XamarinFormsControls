@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"          
+             xmlns:controls1="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="XamarinFormsControls.ImageCirclePage">
+    <ContentPage.Content>
+        <StackLayout HeightRequest="250">
+
+            <controls1:CircleImage Source="businessman.png" Aspect="AspectFill" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <controls1:CircleImage.WidthRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android, iOS">110</On>
+                        <On Platform="WinPhone">75</On>
+                    </OnPlatform>
+                </controls1:CircleImage.WidthRequest>
+                <controls1:CircleImage.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="Android, iOS">110</On>
+                        <On Platform="WinPhone">75</On>
+                    </OnPlatform>
+                </controls1:CircleImage.HeightRequest>
+            </controls1:CircleImage>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand">
+                <Label Text="Murat Kara," FontAttributes="Bold" TextColor="Black" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand"/>
+                <Label Text="Developer" FontAttributes="Italic" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -20,11 +20,11 @@ namespace XamarinFormsControls.Droid.CustomRenders
     [Obsolete]
     public class CustomButtonRenderer : ButtonRenderer
     {
-        protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Button> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Button> e)       //override OnElementChanged yazınca aşağıda gelenden geç
         {
             base.OnElementChanged(e);
 
-            if (Control != null)
+            if (Control != null)   
             {
                 Control.SetAllCaps(false);      //Haflerin herzaman büyük olmasını kapattık.
                 Control.SetBackgroundColor(Android.Graphics.Color.Red);     //Defaultta rengini set ettik. 

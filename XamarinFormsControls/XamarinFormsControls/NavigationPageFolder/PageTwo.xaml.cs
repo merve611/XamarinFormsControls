@@ -9,18 +9,20 @@ using Xamarin.Forms.Xaml;
 
 namespace XamarinFormsControls.NavigationPageFolder
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PageTwo : ContentPage
-    {
-        public PageTwo()
-        {
-            InitializeComponent();
-        }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class PageTwo : ContentPage
+	{
+		public PageTwo()
+		{
+			InitializeComponent();
+		}
 
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new PageThree());
-           
-        }
-    }
-}
+		private async void Button_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new PageThree());
+			
+		}
+		}
+	}
+
+ 

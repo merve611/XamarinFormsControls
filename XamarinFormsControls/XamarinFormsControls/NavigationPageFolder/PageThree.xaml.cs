@@ -9,18 +9,18 @@ using Xamarin.Forms.Xaml;
 
 namespace XamarinFormsControls.NavigationPageFolder
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PageThree : ContentPage
-    {
-        public PageThree()
-        {
-            InitializeComponent();
-        }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class PageThree : ContentPage
+	{
+		public PageThree()
+		{
+			InitializeComponent();
+		}
 
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            await DisplayAlert("UYARI", "Sen artık 3.Sayfadasın","Tamam");
-            await Navigation.PopAsync();
-        }
-    }
+		private async void Button_Clicked(object sender, EventArgs e)
+		{
+			await DisplayAlert("Uyarı", "Sen artık 3. sayfadasın.", "Tamam");
+			await Navigation.PopAsync();
+		}
+	}
 }

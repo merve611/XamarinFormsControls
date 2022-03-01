@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:XamarinFormsControls.CustomRenderersAll"
              x:Class="XamarinFormsControls.ListViewSamplePage">
+                
     <ContentPage.Content>
-        <StackLayout BackgroundColor="LightBlue">
+        <StackLayout BackgroundColor="Transparent">
             <ListView x:Name="myListView" IsPullToRefreshEnabled="True" Refreshing="myListView_Refreshing">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -11,10 +13,11 @@
                         <!--<TextCell Text="{Binding userName}" Detail="{Binding userId}"  />-->
                         <!--<EntryCell Text="{Binding userName}" Label="{Binding userId}"/>-->
 
-                        <ViewCell>
+                        <local:ExtendedViewCell SelectedBackgroundColor="Brown">
                             <ViewCell.ContextActions>
                                 <MenuItem Text="Ekle" Clicked="MenuItem_Clicked"/>
-                                <MenuItem Text="Sil" x:Name="onDelete" Clicked="onDelete_Clicked"/>
+                                <MenuItem Text="Sil" x:Name="onDelete" Clicked="onDelete_Clicked" CommandParameter= "{Binding userId}"/>
+                     
                             </ViewCell.ContextActions> 
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -30,10 +33,11 @@
                                 <Image Source="{Binding imageUrl}" Aspect="Fill" Grid.Row="0" Grid.Column="0"/>
                                 <Entry Placeholder="{Binding userName}" Grid.Row="0" Grid.Column="1" />
                                 <Button Text="{Binding userId}" Grid.Row="0" Grid.Column="2"/>
-
+                                
+                                
 
                             </Grid>
-                        </ViewCell>
+                        </local:ExtendedViewCell>
                         
                     </DataTemplate>
                 </ListView.ItemTemplate>

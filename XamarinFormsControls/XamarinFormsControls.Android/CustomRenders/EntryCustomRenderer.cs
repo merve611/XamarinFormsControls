@@ -15,7 +15,7 @@ using Xamarin.Forms.Platform.Android;
 using XamarinFormsControls.CustomRenderersAll;
 using XamarinFormsControls.Droid.CustomRenders;
 
-[assembly: ExportRenderer(typeof(CustomEntry), typeof(EntryCustomRenderer))]
+[assembly: ExportRenderer(typeof(CustomEntry), typeof(EntryCustomRenderer))]        //Assembly 'i eklemeliyiz 
 namespace XamarinFormsControls.Droid.CustomRenders
 {
     class EntryCustomRenderer :EntryRenderer
